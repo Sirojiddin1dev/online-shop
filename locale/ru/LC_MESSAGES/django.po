@@ -1,0 +1,520 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-12 13:59+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\config\settings.py:123
+msgid "Uzbek"
+msgstr ""
+
+#: .\config\settings.py:124
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:125
+msgid "Russian"
+msgstr ""
+
+#: .\main\admin.py:12
+msgid "Personal info"
+msgstr ""
+
+#: .\main\admin.py:13
+msgid "Permissions"
+msgstr ""
+
+#: .\main\admin.py:16
+msgid "Extra"
+msgstr ""
+
+#: .\template\about.html:11 .\template\account_settings.html:125
+#: .\template\base.html:65 .\template\blog-single.html:10
+#: .\template\blog.html:11 .\template\cart.html:11 .\template\checkout.html:11
+#: .\template\contact.html:11 .\template\product-single.html:10
+#: .\template\shop.html:11 .\template\wishlist.html:10
+msgid "Home"
+msgstr "Дом"
+
+#: .\template\about.html:12
+msgid "About us "
+msgstr "О нас"
+
+#: .\template\about.html:35
+msgid "Shop now "
+msgstr "Купить сейчас"
+
+#: .\template\about.html:52
+msgid "Free Shipping"
+msgstr "Бесплатная доставка"
+
+#: .\template\about.html:53
+msgid "On order over $100"
+msgstr "Под заказ от 100$"
+
+#: .\template\about.html:63
+msgid "Always Fresh"
+msgstr "Всегда Свежий"
+
+#: .\template\about.html:64
+msgid "Product well package"
+msgstr "Продукт хорошо пакет"
+
+#: .\template\about.html:74
+msgid "Superior Quality"
+msgstr "Высшее качество"
+
+#: .\template\about.html:75
+msgid "Quality Products"
+msgstr "Качественная продукция"
+
+#: .\template\about.html:85
+msgid " Support "
+msgstr "Поддерживать"
+
+#: .\template\about.html:86
+msgid " 24/7 Support"
+msgstr " 24/7 Поддерживать"
+
+#: .\template\account_settings.html:126
+msgid "General"
+msgstr "Общий"
+
+#: .\template\account_settings.html:127
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\template\account_settings.html:128
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\template\account_settings.html:151
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\template\account_settings.html:155
+msgid "First name"
+msgstr "Имя"
+
+#: .\template\account_settings.html:159
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\template\account_settings.html:163
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: .\template\account_settings.html:167
+msgid "Mobile number"
+msgstr "Номер мобильного телефона"
+
+#: .\template\account_settings.html:171
+msgid "E-mail"
+msgstr "Электронная почта"
+
+#: .\template\account_settings.html:176
+msgid "Address"
+msgstr "Адрес"
+
+#: .\template\account_settings.html:179 .\template\account_settings.html:211
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: .\template\account_settings.html:200
+msgid "Current password"
+msgstr "Текущий пароль"
+
+#: .\template\account_settings.html:204
+msgid "New password"
+msgstr "Новый пароль"
+
+#: .\template\account_settings.html:208
+msgid "Repeat new password"
+msgstr "повторите новый пароль"
+
+#: .\template\base.html:7
+msgid "Vegefoods - Free Bootstrap 4 Template by Colorlib"
+msgstr ""
+
+#: .\template\base.html:49
+msgid " we teach the production of facade sokol "
+msgstr " обучаем производству фасадного сокола "
+
+#: .\template\base.html:60 .\template\base.html:124
+msgid "Menu"
+msgstr "Меню"
+
+#: .\template\base.html:68 .\template\base.html:126
+msgid "Shop"
+msgstr "Магазин"
+
+#: .\template\base.html:69
+msgid "About us"
+msgstr "О нас"
+
+#: .\template\base.html:70 .\template\blog-single.html:10
+#: .\template\blog-single.html:11 .\template\blog.html:11
+#: .\template\blog.html:12
+msgid "Blog"
+msgstr "Блог"
+
+#: .\template\base.html:71
+msgid "Contact"
+msgstr "Контакт"
+
+#: .\template\base.html:74
+msgid "Account"
+msgstr "Счет"
+
+#: .\template\base.html:77
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\template\base.html:115
+msgid "GoldKlinker"
+msgstr ""
+
+#: .\template\base.html:116
+msgid ""
+" We provide quality plates for facade and Sokol. You can buy with a 20-year "
+"warranty.\n"
+"\n"
+"We also teach production, and sell molds that are cheap and have a 5-year "
+"warranty. "
+msgstr ""
+" Мы предоставляем качественные фасадные плиты и Сокол. Вы можете купить с 20-"
+"летней гарантией.Мы также обучаем производству и продаем пресс-формы, "
+"которые недорогие и имеют гарантию 5 лет. "
+
+#: .\template\base.html:127
+msgid "About"
+msgstr "О нас"
+
+#: .\template\base.html:128
+msgid "Contact Us"
+msgstr "Связаться с нами"
+
+#: .\template\base.html:134
+msgid "Have a Questions?"
+msgstr "Есть вопросы?"
+
+#: .\template\base.html:137
+msgid " Address: "
+msgstr "Адрес:"
+
+#: .\template\base.html:138
+msgid " Phone number: "
+msgstr "Номер телефона: "
+
+#: .\template\base.html:139
+msgid " Telegram: "
+msgstr " Телеграм: "
+
+#: .\template\base.html:140
+msgid " Instagram: "
+msgstr " Инстаграм: "
+
+#: .\template\blog-single.html:36
+msgid " Comments"
+msgstr "Комментарии"
+
+#: .\template\blog-single.html:55
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#: .\template\blog-single.html:59 .\template\contact.html:57
+msgid "Message"
+msgstr "Сообщение"
+
+#: .\template\blog-single.html:73 .\template\blog.html:44
+msgid "Categories"
+msgstr "Категории"
+
+#: .\template\blog-single.html:85 .\template\blog.html:56
+msgid "Recent Blog"
+msgstr "Недавний блог"
+
+#: .\template\blog-single.html:102 .\template\blog.html:73
+msgid "Tag Cloud"
+msgstr "Облако тегов"
+
+#: .\template\blog.html:35
+msgid "Read more"
+msgstr "Читать далее"
+
+#: .\template\cart.html:11
+msgid "Cart"
+msgstr "Корзина"
+
+#: .\template\cart.html:12
+msgid "My Cart"
+msgstr "Моя тележка"
+
+#: .\template\cart.html:28 .\template\wishlist.html:27
+msgid "Product name"
+msgstr "Наименование товара"
+
+#: .\template\cart.html:29 .\template\wishlist.html:28
+msgid "Price"
+msgstr "Цена"
+
+#: .\template\cart.html:30 .\template\wishlist.html:29
+msgid "Quantity"
+msgstr "Количество"
+
+#: .\template\cart.html:31 .\template\cart.html:89 .\template\checkout.html:87
+#: .\template\wishlist.html:30
+msgid "Total"
+msgstr "Общий"
+
+#: .\template\cart.html:32
+msgid "Update"
+msgstr "Обновлять"
+
+#: .\template\cart.html:56
+msgid "Update "
+msgstr "Обновлять"
+
+#: .\template\cart.html:74
+msgid "Cart Totals"
+msgstr "Итоги корзины"
+
+#: .\template\cart.html:76 .\template\checkout.html:74
+msgid "Subtotal"
+msgstr "Промежуточный итог"
+
+#: .\template\cart.html:80 .\template\checkout.html:78
+msgid "Delivery"
+msgstr "Доставка"
+
+#: .\template\cart.html:84 .\template\checkout.html:82
+msgid "Discount"
+msgstr "Скидка"
+
+#: .\template\cart.html:93
+msgid "Proceed to Checkout"
+msgstr "продолжить заказ"
+
+#: .\template\checkout.html:24
+msgid "Billing Details"
+msgstr "Платежные реквизиты"
+
+#: .\template\checkout.html:28
+msgid "Firt Name"
+msgstr "Имя"
+
+#: .\template\checkout.html:34
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: .\template\checkout.html:43
+msgid "Street Address"
+msgstr "Адрес улицы"
+
+#: .\template\checkout.html:51
+msgid "Town / City"
+msgstr "Город / Город"
+
+#: .\template\checkout.html:57
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\template\checkout.html:65
+msgid " Place an order"
+msgstr "Разместить заказ"
+
+#: .\template\checkout.html:72
+msgid "Cart Total"
+msgstr "Корзина Всего"
+
+#: .\template\contact.html:11 .\template\contact.html:12
+msgid "Contact us"
+msgstr "Связаться с нами"
+
+#: .\template\contact.html:24
+msgid "Address:"
+msgstr "Адрес"
+
+#: .\template\contact.html:29
+msgid "Phone:"
+msgstr "Телефон"
+
+#: .\template\contact.html:34
+msgid "Email:"
+msgstr "Электронная почта"
+
+#: .\template\contact.html:39
+msgid ">Website"
+msgstr "Веб-сайт"
+
+#: .\template\contact.html:48
+msgid "Your Name"
+msgstr "Ваше имя"
+
+#: .\template\contact.html:51
+msgid "Your Email"
+msgstr "Ваш адрес электронной почты"
+
+#: .\template\contact.html:54
+msgid "Subject"
+msgstr "Предмет"
+
+#: .\template\contact.html:60
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+#: .\template\index.html:20
+msgid "View Details"
+msgstr "Посмотреть детали"
+
+#: .\template\index.html:40
+msgid " Delivery service "
+msgstr "Служба доставки"
+
+#: .\template\index.html:41
+msgid ""
+" We have a delivery service. Prices may vary depending on product quantity "
+"and delivery distance "
+msgstr ""
+" У нас есть служба доставки. Цены могут меняться в зависимости от количества "
+"товара и расстояния доставки "
+
+#: .\template\index.html:51
+msgid " Pay the way you want "
+msgstr " Платите так, как вы хотите "
+
+#: .\template\index.html:52
+msgid " You can buy by Click, Payme, or cash "
+msgstr " Вы можете купить Click, Payme или наличными. "
+
+#: .\template\index.html:62
+msgid " 10+ years experience and 20 year warranty "
+msgstr " Более 10 лет опыта и гарантия 20 лет. "
+
+#: .\template\index.html:63
+msgid ""
+"We offer a 20-year warranty on our products. Our molds have a 5-year warranty"
+msgstr ""
+" Мы предоставляем 20-летнюю гарантию на нашу продукцию. Гарантия на наши "
+"формы составляет 5 лет. "
+
+#: .\template\index.html:73
+msgid "Support"
+msgstr "Поддерживать"
+
+#: .\template\index.html:74
+msgid ""
+" Our 24/7 call centers are available for you. You can easily get information "
+"by phone "
+msgstr ""
+" Наши колл-центры доступны для вас круглосуточно. Вы можете легко получить "
+"информацию по телефону "
+
+#: .\template\index.html:88
+msgid "Our Products"
+msgstr "Наши продукты"
+
+#: .\template\index.html:89
+msgid "our discounted and new products "
+msgstr " наши скидки и новые продукты "
+
+#: .\template\index.html:140
+msgid "Latest News"
+msgstr "Последние новости"
+
+#: .\template\index.html:141
+msgid ""
+" Stay up to date with the latest news. The latest news about our activities "
+msgstr ""
+" Будьте в курсе последних новостей. Последние новости о нашей деятельности "
+
+#: .\template\product-single.html:11
+msgid "Product Single"
+msgstr "Продукт Одиночный"
+
+#: .\template\product-single.html:46
+msgid "Add to Cart"
+msgstr "добавить в корзину"
+
+#: .\template\product-single.html:57 .\template\shop.html:11
+#: .\template\shop.html:12
+msgid "Products"
+msgstr "Продукты"
+
+#: .\template\product-single.html:58
+msgid "Related Products"
+msgstr "сопутствующие товары"
+
+#: .\template\product-single.html:59
+msgid ""
+"Far far away, behind the word mountains, far from the countries Vokalia and "
+"Consonantia"
+msgstr "Далеко-далеко, за словом горы, далеко от стран Вокалии и Консонантия"
+
+#: .\template\shop.html:23
+msgid "All"
+msgstr "Все"
+
+#: .\template\wishlist.html:10
+msgid "Wishlist"
+msgstr "Список желаний"
+
+#: .\template\wishlist.html:11
+msgid "My Wishlist"
+msgstr "Мой список пожеланий"
+
+#~ msgid "Vegefoods"
+#~ msgstr "Растительные продукты"
+
+#~ msgid "Journal"
+#~ msgstr "Журнал"
+
+#~ msgid "Help"
+#~ msgstr "Помощь"
+
+#~ msgid "Shipping Information"
+#~ msgstr "информация о доставке"
+
+#~ msgid "Returns &amp; Exchange"
+#~ msgstr "Возврат и усиление; Обмен"
+
+#~ msgid "Terms &amp; Conditions"
+#~ msgstr "Условия &amp; Условия"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "политика конфиденциальности"
+
+#~ msgid "FAQs"
+#~ msgstr "Часто задаваемые вопросы"
+
+#, fuzzy
+#~| msgid ""
+#~| "Far far away, behind the word mountains, far from the countries Vokalia "
+#~| "and Consonantia"
+#~ msgid ""
+#~ " Far far away, behind the word mountains, far from the countries Vokalia "
+#~ "and Consonantia "
+#~ msgstr ""
+#~ "Далеко-далеко, за словом горы, далеко от стран Вокалии и Консонантия"
+
+#~ msgid "Featured Products"
+#~ msgstr "Рекомендуемые продукты"
+
+#~ msgid "24/7 Support"
+#~ msgstr "Круглосуточная поддержка"

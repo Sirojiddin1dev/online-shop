@@ -1,0 +1,197 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>{% blocktrans %}GoldKlinker-sifatli plita va qoliblar{% endblocktrans %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body class="goto-here">
+		<div class="py-1 bg-primary" style="background: green !important;">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">{{contact.phone_number}}</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">{{contact.email}}</span>
+					    </div>
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+						    <span class="text">{% blocktrans %} we teach the production of facade sokol {% endblocktrans %}</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" style="background: white;" id="ftco-navbar">
+	    <div class="container">
+	      <a href="{% url 'index_url'  %}"><img src="{{ contact.logo.url }}" alt="#" class="" /></a>
+	      <button class="navbar-toggler" style="background: #ffffff" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu" style="color: #000000"></span> {% blocktrans %}Menu{% endblocktrans %}
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="{% url 'index_url' %}" class="nav-link">{% blocktrans %}Home{% endblocktrans %}</a></li>
+
+
+	          <li class="nav-item"><a href="{% url 'shop_url' %}" class="nav-link" style="color: black">{% blocktrans %}Shop{% endblocktrans %}</a></li>
+	          <li class="nav-item"><a href="{% url 'about_url' %}" class="nav-link" style="color: black">{% blocktrans %}About us{% endblocktrans %}</a></li>
+	          <li class="nav-item"><a href="{% url 'blog_url' %}" class="nav-link" style="color: black">{% blocktrans %}Blog{% endblocktrans %}</a></li>
+	          <li class="nav-item"><a href="{% url 'contact_url' %}" class="nav-link" style="color: black">{% blocktrans %}Contact{% endblocktrans %}</a></li>
+
+                {% if user.is_authenticated %}
+                <li class="nav-item"><a href="{% url 'account_url' %}" class="nav-link" style="color: black">{% blocktrans %}Account{% endblocktrans %}</a></li>
+	          <li class="nav-item cta cta-colored"><a href="{% url 'cart_url' %}" class="nav-link" style="color: black"><span class="icon-shopping_cart"></span>[{{basket}}]</a></li>
+                {% else %}
+                <li class="nav-item"><a href="{% url 'login_url' %}" class="nav-link" style="color: black">{% blocktrans %}Login{% endblocktrans %}</a></li>
+	          <li class="nav-item cta cta-colored"><a href="{% url 'cart_url' %}" class="nav-link" style="background-color: green"><span class="icon-shopping_cart"></span>[0]</a></li>
+                {% endif %}
+	        </ul>
+              <ul class="header-list-menu f-right">
+                  <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                      <input name="next" type="hidden" value="{{ redirect_to }}">
+                      <select name="language" onchange="this.form.submit()">
+                          {% get_current_language as LANGUAGE_CODE %}
+                          {% get_available_languages as LANGUAGES %}
+                          {% get_language_info_list for LANGUAGES as languages %}
+                          {% for language in languages %}
+                          <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                              {{ language.name_local }} ({{ language.code }})
+                          </option>
+                          {% endfor %}
+                      </select>
+                  </form>
+              </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+{% block content %}
+{% endblock %}
+<hr>
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">{% blocktrans %}GoldKlinker{% endblocktrans %}</h2>
+              <p>{% blocktrans %} We provide quality plates for facade and Sokol. You can buy with a 20-year warranty.
+
+We also teach production, and sell molds that are cheap and have a 5-year warranty. {% endblocktrans %}</p>
+
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">{% blocktrans %}Menu{% endblocktrans %}</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'shop_url' %}" class="py-2 d-block">{% blocktrans %}Shop{% endblocktrans %}</a></li>
+                <li><a href="{% url 'about_url' %}" class="py-2 d-block">{% blocktrans %}About{% endblocktrans %}</a></li>
+                <li><a href="{% url 'contact_url' %}" class="py-2 d-block">{% blocktrans %}Contact Us{% endblocktrans %}</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">{% blocktrans %}Have a Questions?{% endblocktrans %}</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span></span>{% blocktrans %} Address: {% endblocktrans %} <span class="text">{{contact.address}}</span></li>
+	                <li><a href="#"><span> {% blocktrans %} Phone number: {% endblocktrans %}  </span> <span class="text">{{contact.phone_number}}</span></a></li>
+	                <li><a href="#"><span>{% blocktrans %} Telegram: {% endblocktrans %} </span> <span class="text">{{contact.email}}</span></a></li>
+                    <li><a href="#"><span>{% blocktrans %} Instagram: {% endblocktrans %} </span> <span class="text">{{contact.email}}</span></a></li>
+
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}" ></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+<!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+<script>
+    function addToBasket(productId) {
+        event.preventDefault();
+        var xhr = new XMLHttpRequest();
+        var url = "/add_basket/" + productId + "/";
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Mahsulot qo'shildi
+                alert("Mahsulot savatga qo'shildi");
+                setTimeout(function() {
+                    window.close();
+                }, 5);
+            }
+        };
+        xhr.send();
+    }
+</script>
+  </body>
+</html>

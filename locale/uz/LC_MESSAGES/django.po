@@ -1,0 +1,522 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-12 13:59+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\config\settings.py:123
+msgid "Uzbek"
+msgstr ""
+
+#: .\config\settings.py:124
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:125
+msgid "Russian"
+msgstr ""
+
+#: .\main\admin.py:12
+msgid "Personal info"
+msgstr ""
+
+#: .\main\admin.py:13
+msgid "Permissions"
+msgstr ""
+
+#: .\main\admin.py:16
+msgid "Extra"
+msgstr ""
+
+#: .\template\about.html:11 .\template\account_settings.html:125
+#: .\template\base.html:65 .\template\blog-single.html:10
+#: .\template\blog.html:11 .\template\cart.html:11 .\template\checkout.html:11
+#: .\template\contact.html:11 .\template\product-single.html:10
+#: .\template\shop.html:11 .\template\wishlist.html:10
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\template\about.html:12
+msgid "About us "
+msgstr "Biz haqimizda"
+
+#: .\template\about.html:35
+msgid "Shop now "
+msgstr "Hozir xarid qiling"
+
+#: .\template\about.html:52
+msgid "Free Shipping"
+msgstr "Yetkazib berish bepul"
+
+#: .\template\about.html:53
+msgid "On order over $100"
+msgstr "100 dollardan ortiq buyurtma bo'yicha"
+
+#: .\template\about.html:63
+msgid "Always Fresh"
+msgstr "Har doim yangi"
+
+#: .\template\about.html:64
+msgid "Product well package"
+msgstr "Mahsulot yaxshi paketi"
+
+#: .\template\about.html:74
+msgid "Superior Quality"
+msgstr "Yuqori sifat"
+
+#: .\template\about.html:75
+msgid "Quality Products"
+msgstr "Sifatli Mahsulotlar"
+
+#: .\template\about.html:85
+msgid " Support "
+msgstr "Qo'llab-quvvatlash"
+
+#: .\template\about.html:86
+msgid " 24/7 Support"
+msgstr "24/7 qo'llab-quvvatlash"
+
+#: .\template\account_settings.html:126
+msgid "General"
+msgstr "umumiy"
+
+#: .\template\account_settings.html:127
+msgid "Change password"
+msgstr "Parolni o'zgartirish"
+
+#: .\template\account_settings.html:128
+msgid "Log out"
+msgstr "Chiqish"
+
+#: .\template\account_settings.html:151
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+#: .\template\account_settings.html:155
+msgid "First name"
+msgstr "Ism"
+
+#: .\template\account_settings.html:159
+msgid "Last name"
+msgstr "Familiya"
+
+#: .\template\account_settings.html:163
+msgid "Phone number"
+msgstr "Telefon raqami"
+
+#: .\template\account_settings.html:167
+msgid "Mobile number"
+msgstr "Mobil telefon raqami"
+
+#: .\template\account_settings.html:171
+msgid "E-mail"
+msgstr "Elektron pochta"
+
+#: .\template\account_settings.html:176
+msgid "Address"
+msgstr "Manzil"
+
+#: .\template\account_settings.html:179 .\template\account_settings.html:211
+msgid "Save changes"
+msgstr "O'zgarishlarni saqlang"
+
+#: .\template\account_settings.html:200
+msgid "Current password"
+msgstr "Joriy parol"
+
+#: .\template\account_settings.html:204
+msgid "New password"
+msgstr "Yangi parol"
+
+#: .\template\account_settings.html:208
+msgid "Repeat new password"
+msgstr "Yangi parolni takrorlang"
+
+#: .\template\base.html:7
+msgid "Vegefoods - Free Bootstrap 4 Template by Colorlib"
+msgstr ""
+
+#: .\template\base.html:49
+msgid " we teach the production of facade sokol "
+msgstr "fasad sokol ishlab chiqarishni o'rgatamiz"
+
+#: .\template\base.html:60 .\template\base.html:124
+msgid "Menu"
+msgstr "Menyu"
+
+#: .\template\base.html:68 .\template\base.html:126
+msgid "Shop"
+msgstr "Do'kon"
+
+#: .\template\base.html:69
+msgid "About us"
+msgstr "Biz haqimizda"
+
+#: .\template\base.html:70 .\template\blog-single.html:10
+#: .\template\blog-single.html:11 .\template\blog.html:11
+#: .\template\blog.html:12
+msgid "Blog"
+msgstr "Blog"
+
+#: .\template\base.html:71
+msgid "Contact"
+msgstr "Aloqa"
+
+#: .\template\base.html:74
+msgid "Account"
+msgstr "Account"
+
+#: .\template\base.html:77
+msgid "Login"
+msgstr "Kirish"
+
+#: .\template\base.html:115
+msgid "GoldKlinker"
+msgstr ""
+
+#: .\template\base.html:116
+msgid ""
+" We provide quality plates for facade and Sokol. You can buy with a 20-year "
+"warranty.\n"
+"\n"
+"We also teach production, and sell molds that are cheap and have a 5-year "
+"warranty. "
+msgstr ""
+" Fasad va Sokol uchun sifatlik plitalar bilan ta'minlaymiz. 20 yillik "
+"kafolat bilan harid qilishingiz mumkin.Ishlab chiqarishni ham o'rgatamiz, "
+"arzon va 5 yillik kafolatga ega qoliplarni ham sotamiz. "
+
+#: .\template\base.html:127
+msgid "About"
+msgstr "Biz Haqimizda"
+
+#: .\template\base.html:128
+msgid "Contact Us"
+msgstr "Biz bilan bog'lanish"
+
+#: .\template\base.html:134
+msgid "Have a Questions?"
+msgstr "Savollaringiz bormi?"
+
+#: .\template\base.html:137
+msgid " Address: "
+msgstr "Manzil:"
+
+#: .\template\base.html:138
+msgid " Phone number: "
+msgstr "Telefon raqami:"
+
+#: .\template\base.html:139
+msgid " Telegram: "
+msgstr "Telegram: "
+
+#: .\template\base.html:140
+msgid " Instagram: "
+msgstr " Instagram: "
+
+#: .\template\blog-single.html:36
+msgid " Comments"
+msgstr "Izohlar"
+
+#: .\template\blog-single.html:55
+msgid "Leave a comment"
+msgstr "Fikr qoldiring"
+
+#: .\template\blog-single.html:59 .\template\contact.html:57
+msgid "Message"
+msgstr "Xabar"
+
+#: .\template\blog-single.html:73 .\template\blog.html:44
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+#: .\template\blog-single.html:85 .\template\blog.html:56
+msgid "Recent Blog"
+msgstr "Oxirgi blog"
+
+#: .\template\blog-single.html:102 .\template\blog.html:73
+msgid "Tag Cloud"
+msgstr "Teg buluti"
+
+#: .\template\blog.html:35
+msgid "Read more"
+msgstr "Ko'proq ko'rish"
+
+#: .\template\cart.html:11
+msgid "Cart"
+msgstr "Savat"
+
+#: .\template\cart.html:12
+msgid "My Cart"
+msgstr "Mening savatlarim"
+
+#: .\template\cart.html:28 .\template\wishlist.html:27
+msgid "Product name"
+msgstr "Mahsulot nomi"
+
+#: .\template\cart.html:29 .\template\wishlist.html:28
+msgid "Price"
+msgstr "Narxi"
+
+#: .\template\cart.html:30 .\template\wishlist.html:29
+msgid "Quantity"
+msgstr "Miqdori"
+
+#: .\template\cart.html:31 .\template\cart.html:89 .\template\checkout.html:87
+#: .\template\wishlist.html:30
+msgid "Total"
+msgstr "Jami"
+
+#: .\template\cart.html:32
+msgid "Update"
+msgstr "Yangilash"
+
+#: .\template\cart.html:56
+msgid "Update "
+msgstr "Yangilash"
+
+#: .\template\cart.html:74
+msgid "Cart Totals"
+msgstr "Savat "
+
+#: .\template\cart.html:76 .\template\checkout.html:74
+msgid "Subtotal"
+msgstr "Oraliq jami"
+
+#: .\template\cart.html:80 .\template\checkout.html:78
+msgid "Delivery"
+msgstr "Yetkazib berish"
+
+#: .\template\cart.html:84 .\template\checkout.html:82
+msgid "Discount"
+msgstr "Chegirma"
+
+#: .\template\cart.html:93
+msgid "Proceed to Checkout"
+msgstr "Buyurtmani davom ettirish"
+
+#: .\template\checkout.html:24
+msgid "Billing Details"
+msgstr "Hisob-kitob tafsilotlari"
+
+#: .\template\checkout.html:28
+msgid "Firt Name"
+msgstr "Ism"
+
+#: .\template\checkout.html:34
+msgid "Last Name"
+msgstr "Familiya"
+
+#: .\template\checkout.html:43
+msgid "Street Address"
+msgstr "Ko'cha manzili"
+
+#: .\template\checkout.html:51
+msgid "Town / City"
+msgstr "Shahar / shahar"
+
+#: .\template\checkout.html:57
+msgid "Phone"
+msgstr "Telefon"
+
+#: .\template\checkout.html:65
+msgid " Place an order"
+msgstr "Buyurtma bering"
+
+#: .\template\checkout.html:72
+msgid "Cart Total"
+msgstr "Jami arava"
+
+#: .\template\contact.html:11 .\template\contact.html:12
+msgid "Contact us"
+msgstr "Biz bilan bog'lanish"
+
+#: .\template\contact.html:24
+msgid "Address:"
+msgstr "Manzil"
+
+#: .\template\contact.html:29
+msgid "Phone:"
+msgstr "Telefon"
+
+#: .\template\contact.html:34
+msgid "Email:"
+msgstr "Elektron pochta"
+
+#: .\template\contact.html:39
+msgid ">Website"
+msgstr "Veb-sayt"
+
+#: .\template\contact.html:48
+msgid "Your Name"
+msgstr "Ismingiz"
+
+#: .\template\contact.html:51
+msgid "Your Email"
+msgstr "Sizning elektron manzilingiz"
+
+#: .\template\contact.html:54
+msgid "Subject"
+msgstr "Mavzu"
+
+#: .\template\contact.html:60
+msgid "Send Message"
+msgstr "Xabar yuborish"
+
+#: .\template\index.html:20
+msgid "View Details"
+msgstr "Tafsilotlarni ko'rish"
+
+#: .\template\index.html:40
+msgid " Delivery service "
+msgstr "Yetkazib berish xizmati "
+
+#: .\template\index.html:41
+msgid ""
+" We have a delivery service. Prices may vary depending on product quantity "
+"and delivery distance "
+msgstr ""
+"Bizda yetkazib berish xizmati bor. Narxlar mahsulot miqdoriga qarab farq "
+"qilishi mumkin"
+
+#: .\template\index.html:51
+msgid " Pay the way you want "
+msgstr " To'lov siz hohlagan usulda  "
+
+#: .\template\index.html:52
+msgid " You can buy by Click, Payme, or cash "
+msgstr " Click, Payme, yoki naqt pul orqali harid qilishingiz mumkin "
+
+#: .\template\index.html:62
+msgid " 10+ years experience and 20 year warranty "
+msgstr " 10+ yillik tajriba va 20 yillik kafolat "
+
+#: .\template\index.html:63
+msgid ""
+"We offer a 20-year warranty on our products. Our molds have a 5-year warranty"
+msgstr ""
+" Biz mahsulotlarimizga 20 yillik kafolatni taqdim etamiz. Qoliplarimizga esa "
+"5 yillik kafolat bor "
+
+#: .\template\index.html:73
+msgid "Support"
+msgstr "Qo'llab-quvvatlash"
+
+#: .\template\index.html:74
+msgid ""
+" Our 24/7 call centers are available for you. You can easily get information "
+"by phone "
+msgstr ""
+" Bizning qo'ng'iroq markazlarimiz siz uchun 24/7 ishlaydi. Ma'lumotni "
+"telefon orqali osongina olishingiz mumkin "
+
+#: .\template\index.html:88
+msgid "Our Products"
+msgstr "Mahsulotlarimiz"
+
+#: .\template\index.html:89
+msgid "our discounted and new products "
+msgstr " chegirmadagi hamda yangi chiqgan mahsulotlarimiz "
+
+#: .\template\index.html:140
+msgid "Latest News"
+msgstr "So'ngi yangiliklar"
+
+#: .\template\index.html:141
+msgid ""
+" Stay up to date with the latest news. The latest news about our activities "
+msgstr ""
+"So'ngi yangiliklardan bohabar bo'ling. Bizning faoliyatimiz borasidagi eng "
+"so'ngi yangliklar"
+
+#: .\template\product-single.html:11
+msgid "Product Single"
+msgstr " Yagona mahsulot "
+
+#: .\template\product-single.html:46
+msgid "Add to Cart"
+msgstr "savatchaga qo'shish"
+
+#: .\template\product-single.html:57 .\template\shop.html:11
+#: .\template\shop.html:12
+msgid "Products"
+msgstr "Mahsulotlar"
+
+#: .\template\product-single.html:58
+msgid "Related Products"
+msgstr "Tegishli mahsulotlar"
+
+#: .\template\product-single.html:59
+msgid ""
+"Far far away, behind the word mountains, far from the countries Vokalia and "
+"Consonantia"
+msgstr ""
+"Uzoqda, tog'lar so'zining orqasida, Vokaliya va mamlakatlardan uzoqda  "
+"Consonantia"
+
+#: .\template\shop.html:23
+msgid "All"
+msgstr "Hammasi"
+
+#: .\template\wishlist.html:10
+msgid "Wishlist"
+msgstr "Wishlist"
+
+#: .\template\wishlist.html:11
+msgid "My Wishlist"
+msgstr "Mening istaklar roʻyxatim"
+
+#~ msgid "Vegefoods"
+#~ msgstr "Sabzavotli ovqatlar"
+
+#~ msgid "Journal"
+#~ msgstr "Journal"
+
+#~ msgid "Help"
+#~ msgstr "Yordam"
+
+#~ msgid "Shipping Information"
+#~ msgstr "Yuk tashish ma'lumotlari"
+
+#~ msgid "Returns &amp; Exchange"
+#~ msgstr "Qaytadi &amp; Ayirboshlash"
+
+#~ msgid "Terms &amp; Conditions"
+#~ msgstr "Shartlar &amp; Shartlar"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Maxfiylik siyosati"
+
+#~ msgid "FAQs"
+#~ msgstr "Tez-tez so'raladigan savollar"
+
+#, fuzzy
+#~| msgid ""
+#~| "Far far away, behind the word mountains, far from the countries Vokalia "
+#~| "and Consonantia"
+#~ msgid ""
+#~ " Far far away, behind the word mountains, far from the countries Vokalia "
+#~ "and Consonantia "
+#~ msgstr ""
+#~ "Uzoqda, tog'lar so'zining orqasida, Vokaliya va mamlakatlardan uzoqda  "
+#~ "Consonantia"
+
+#~ msgid "Featured Products"
+#~ msgstr "Tanlangan mahsulotlar"
+
+#~ msgid " plitka ishlab chiqarishni o'rgatamiz "
+#~ msgstr "  "

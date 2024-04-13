@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+{% load static %}
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>Checkout</span></p>
+            <h1 class="mb-0 bread">Checkout</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 ftco-animate">
+			  <form action="{% url 'create_order_url' %}" method="post" class="billing-form">
+				  {% csrf_token %}
+				  <h3 class="mb-4 billing-heading">{% blocktrans %}Billing Details{% endblocktrans %}</h3>
+	          	<div class="row align-items-end">
+	          		<div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="firstname">{% blocktrans %}Firt Name{% endblocktrans %}</label>
+	                  <input type="text" name="firstname" id="firstname" class="form-control" placeholder="">
+	                </div>
+	              </div>
+	              <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="lastname">{% blocktrans %}Last Name{% endblocktrans %}</label>
+	                  <input type="text" name="lastname" id="lastname" class="form-control" placeholder="">
+	                </div>
+                </div>
+                <div class="w-100"></div>
+
+		            <div class="w-100"></div>
+		            <div class="col-md-6">
+		            	<div class="form-group">
+	                	<label for="street">{% blocktrans %}Street Address{% endblocktrans %}</label>
+	                  <input type="text" name="street" id="street" class="form-control" placeholder="House number and street name">
+	                </div>
+		            </div>
+
+
+		            <div class="col-md-6">
+		            	<div class="form-group">
+	                	<label for="city">{% blocktrans %}Town / City{% endblocktrans %}</label>
+	                  <input type="text" name="city" id="city" class="form-control" placeholder="">
+	                </div>
+		            </div>
+		            <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="phone">{% blocktrans %}Phone{% endblocktrans %}</label>
+	                  <input type="text" id="phone" name="phone_number" class="form-control" placeholder="">
+	                </div>
+	              </div>
+
+
+
+	            </div>
+				  <p><button type="submit" class="btn btn-primary py-3s px-4">{% blocktrans %} Place an order{% endblocktrans %}</button></p>
+	          </form><!-- END -->
+					</div>
+					<div class="col-xl-5">
+	          <div class="row mt-5 pt-3">
+	          	<div class="col-md-12 d-flex mb-5">
+	          		<div class="cart-detail cart-total p-3 p-md-4">
+	          			<h3 class="billing-heading mb-4">{% blocktrans %}Cart Total{% endblocktrans %}</h3>
+	          			<p class="d-flex">
+		    						<span>{% blocktrans %}Subtotal{% endblocktrans %}</span>
+		    						<span>{{total}}</span>
+		    					</p>
+		    					<p class="d-flex">
+		    						<span>{% blocktrans %}Delivery{% endblocktrans %}</span>
+		    						<span>0.00</span>
+		    					</p>
+		    					<p class="d-flex">
+		    						<span>{% blocktrans %}Discount{% endblocktrans %}</span>
+		    						<span>0.00</span>
+		    					</p>
+		    					<hr>
+		    					<p class="d-flex total-price">
+		    						<span>{% blocktrans %}Total{% endblocktrans %}</span>
+		    						<span>{{total}}</span>
+		    					</p>
+								</div>
+	          	</div>
+
+	          </div>
+          </div> <!-- .col-md-8 -->
+        </div>
+
+      </div>
+    </section> <!-- .section -->
+
+{% endblock %}

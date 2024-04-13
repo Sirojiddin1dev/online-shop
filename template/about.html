@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+{% load static %}
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>About us</span></p>
+            <h1 class="mb-0 bread">{% blocktrans %}About us {% endblocktrans %}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+						<img style="width:900px; height:500px; border-radius:15px " src="{{ about.image.url }}">
+
+						</a>
+					</div>
+					<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+	          <div class="heading-section-bold mb-4 mt-md-5">
+	          	<div class="ml-md-0">
+		            <h2 class="mb-4">{{ about.title }}</h2>
+	            </div>
+	          </div>
+	          <div class="pb-md-5">
+	          	<p>{{about.description}}</p>
+							<p>{{about.description}}</p>
+							<p><a href="{% url 'shop_url' %}" class="btn btn-primary"> {% blocktrans %}Shop now {% endblocktrans %} </a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+    <section class="ftco-section bg-light">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-shipped"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %}Free Shipping{% endblocktrans %}</h3>
+                <span>{% blocktrans %}On order over $100{% endblocktrans %}</span>
+              </div>
+            </div>      
+          </div>
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-diet"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %}Always Fresh{% endblocktrans %}</h3>
+                <span>{% blocktrans %}Product well package{% endblocktrans %}</span>
+              </div>
+            </div>    
+          </div>
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-award"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %}Superior Quality{% endblocktrans %}</h3>
+                <span>{% blocktrans %}Quality Products{% endblocktrans %}</span>
+              </div>
+            </div>      
+          </div>
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-customer-service"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %} Support {% endblocktrans %}</h3>
+                <span>{% blocktrans %} 24/7 Support{% endblocktrans %}</span>
+              </div>
+            </div>      
+          </div>
+        </div>
+			</div>
+		</section>
+{% endblock %}

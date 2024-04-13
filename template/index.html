@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+{% load static %}
+
+
+
+
+    <section id="home-section" class="hero">
+		  <div class="home-slider owl-carousel">
+			{% for i in banner %}
+	      <div class="slider-item" style="background-image: url({{i.banner_image.url}});">
+	      	<div class="overlay" style="background-color:white"></div>
+	        <div class="container">
+	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+	            <div class="col-md-12 ftco-animate text-center">
+					<h1 class="mb-2" style="font-size: 10vh"><b>{{ i.banner_title }}</b></h1>
+	              <h2 class="subheading mb-4" style="font-size: 3vh">{{ i.banner_description }}</h2>
+	              <p><a href="{% url 'product_single_url' i.product.id %}" class="btn btn-primary">{% blocktrans %}View Details{% endblocktrans %}</a></p>
+	            </div>
+
+	          </div>
+	        </div>
+	      </div>
+			  {% endfor %}
+
+	    </div>
+    </section>
+
+    <section class="ftco-section">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-md-2 text-center d-flex align-self-stretch ftco-animate" style="margin:45px">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-shipped"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %} Delivery service {% endblocktrans %}</h3>
+                <span>{% blocktrans %} We have a delivery service. Prices may vary depending on product quantity and delivery distance {% endblocktrans %}</span>
+              </div>
+            </div>      
+          </div>
+
+          <div class="col-md-2 text-center d-flex align-self-stretch ftco-animate" style="margin:45px">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            		<span class="icon-usd"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %} Pay the way you want {% endblocktrans %}</h3>
+                <span>{% blocktrans %} You can buy by Click, Payme, or cash {% endblocktrans %}</span>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-2 text-center d-flex align-self-stretch ftco-animate" style="margin:45px">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-award"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %} 10+ years experience and 20 year warranty {% endblocktrans %}</h3>
+                <span>{% blocktrans %}We offer a 20-year warranty on our products. Our molds have a 5-year warranty{% endblocktrans %}</span>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-2 text-center d-flex align-self-stretch ftco-animate" style="margin:45px">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-customer-service"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">{% blocktrans %}Support{% endblocktrans %}</h3>
+                <span>{% blocktrans %} Our 24/7 call centers are available for you. You can easily get information by phone {% endblocktrans %}</span>
+              </div>
+            </div>      
+          </div>
+        </div>
+			</div>
+		</section>
+
+
+
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">{% blocktrans %}Our Products{% endblocktrans %}</h2>
+            <p>{% blocktrans %}our discounted and new products {% endblocktrans %}</p>
+          </div>
+        </div>   		
+    	</div>
+    	<div class="container">
+    		<div class="row">
+				{% for i in product %}
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="product">
+    					<a href="{% url 'product_single_url' i.id %}" class="img-prod"><img class="img-fluid" src="{{i.image.url}}" alt="Colorlib Template">
+							{% if i.discount %}
+    						<span class="status">{{i.discount}}%</span>
+							{% else %}
+    						<div class="overlay"></div>
+							{% endif %}
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="{% url 'product_single_url' i.id %}">{{ i.title }}</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+									{% if i.discount %}
+		    						<p class="price"><span class="mr-2 price-dc">{{ i.price }}</span><span class="price-sale">{{ i.discount_price }}</span></p>
+									{% else %}
+									<p class="price"><span class="price-sale">{{ i.price }}</span></p>
+									{% endif %}
+		    					</div>
+	    					</div>
+	    					<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="{% url 'product_single_url' i.id %}" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    								<span><i class="ion-ios-menu"></i></span>
+	    							</a>
+
+									<a href="{% url 'add_basket_url' i.id %}" class="buy-now d-flex justify-content-center align-items-center mx-1" onclick="addToBasket({{ i.id }})" >
+										<span><i class="ion-ios-cart"></i></span>
+									</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+				{% endfor %}
+
+    		</div>
+    	</div>
+    </section>
+<section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+
+            <h2 class="mb-4">{% blocktrans %}Latest News{% endblocktrans %}</h2>
+            <p>{% blocktrans %} Stay up to date with the latest news. The latest news about our activities {% endblocktrans %}</p>
+          </div>
+        </div>
+    	</div>
+    	<div class="container">
+    		<div class="row">
+				{% for i in latest %}
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="product" style="border-radius:5px">
+    					<a href="{% url 'blog_single_url' i.pk %}" class="img-prod"><img style="height:150px; width:200px; border-radius:10px; margin-left:11%; margin-top:10px"  class="img-fluid" src="{{i.image.url}}" alt="Colorlib Template">
+
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="{% url 'blog_single_url' i.pk %}">{{ i.title }}</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+
+		    					</div>
+	    					</div>
+	    					<div class="bottom-area d-flex px-3">
+
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+				{% endfor %}
+
+    		</div>
+    	</div>
+    </section>
+
+{% endblock %}
+		

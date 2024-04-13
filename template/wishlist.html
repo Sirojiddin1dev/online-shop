@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+{% load static %}
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>{% blocktrans %}Wishlist{% endblocktrans %}</span></p>
+            <h1 class="mb-0 bread">{% blocktrans %}My Wishlist{% endblocktrans %}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-cart">
+			<div class="container">
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>&nbsp;</th>
+						        <th>&nbsp;</th>
+						        <th>{% blocktrans %}Product name{% endblocktrans %}</th>
+						        <th>{% blocktrans %}Price{% endblocktrans %}</th>
+						        <th>{% blocktrans %}Quantity{% endblocktrans %}</th>
+						        <th>{% blocktrans %}Total{% endblocktrans %}</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+							{% for i in products %}
+								<tr class="text-center">
+						        <td class="product-remove"><a href="{% url 'remove_cart_product_url' user.id %}"><span class="ion-ios-close"></span></a></td>
+
+						        <td class="image-prod"><img src="{{i.name.image.url}}" style="height:100px; width:120px"></td>
+
+						        <td class="product-name">
+						        	<h3>{{i.name.title}}</h3>
+						        	<p>{{i.name.info}}</p>
+						        </td>
+
+						        <td class="price">{{i.name.price}}</td>
+
+						        <td class="quantity">
+						        	<div class="input-group mb-3">
+					             	<input type="text" name="quantity" class="quantity form-control input-number" value="{{i.number}}" min="1" max="100">
+					          	</div>
+					          </td>
+
+						        <td class="total">{{i.common}}</td>
+						      </tr>
+								{% endfor %}
+						    </tbody>
+						  </table>
+					  </div>
+    			</div>
+    		</div>
+
+			</div>
+		</section>
+
+{% endblock %}

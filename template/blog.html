@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+{% load static %}
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %}) ">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>{% blocktrans %}Blog{% endblocktrans %}</span></p>
+            <h1 class="mb-0 bread">{% blocktrans %}Blog{% endblocktrans %}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+			  <div class="row">
+				  {% for i in blog %}
+				  <div class="col-md-12 d-flex ftco-animate">
+		            <div class="blog-entry align-self-stretch d-md-flex">
+		              <a href="{% url 'blog_single_url' i.pk %}" class="block-20" style=" border-radius:15px;  background-image: url('{{ i.image.url }}');">
+		              </a>
+		              <div class="text d-block pl-md-4">
+		              	<div class="meta mb-3">
+		                  <div><a href="{% url 'blog_single_url' i.pk %}">{{ i.created_at }}</a></div>
+		                  <div><a href="{% url 'blog_single_url' i.pk %}">{{ i.user }}</a></div>
+		                </div>
+		                <h3 class="heading"><a href="{% url 'blog_single_url' i.pk %}">{{ i.title }}</a></h3>
+		                <p>{{ i.text }}</p>
+		                <p><a href="{% url 'blog_single_url' i.pk %}" class="btn btn-primary py-2 px-3">{% blocktrans %}Read more{% endblocktrans %}</a></p>
+		              </div>
+		            </div>
+		          </div>
+		          {% endfor %}
+						</div>
+          </div> <!-- .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+                <h3 class="heading">{% blocktrans %}Categories{% endblocktrans %}</h3>
+              <ul class="categories">
+                  {% for i in category %}
+                <li><a href="/shop/?category={{i.name}}">{{ i.name }} </a></li>
+                  {% endfor %}
+
+              </ul>
+            </div>
+
+
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading">{% blocktrans %}Recent Blog{% endblocktrans %}</h3>
+              {% for i in blog %}
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style=" border-radius:15px; background-image: url('{{ i.image.url }}')"></a>
+                <div class="text">
+                  <h3 class="heading-1"><a href="{% url 'blog_single_url' i.pk %}">{{ i.title }}</a></h3>
+                  <div class="meta">
+                    <div><a href="{% url 'blog_single_url' i.pk %}"><span class="icon-calendar"></span> {{ i.created_at }}</a></div>
+                    <div><a href="{% url 'blog_single_url' i.pk %}"><span class="icon-person"></span> {{ i.user }}</a></div>
+
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading">{% blocktrans %}Tag Cloud{% endblocktrans %}</h3>
+                {% for i in tag %}
+              <div class="tagcloud">
+                <a href="" class="tag-cloud-link">{{ i.name }}</a>
+              </div>
+                {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+{% endblock %}

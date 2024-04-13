@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %})">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>{% blocktrans %}Blog{% endblocktrans %}</span></p>
+            <h1 class="mb-0 bread">{% blocktrans %}Blog{% endblocktrans %}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">{{ blog.title }}</h2>
+            <p>{{ blog.text }}</p>
+            <p>
+              <img style="border-radius:15px"  src="{{ blog.image.url }}" alt="" class="img-fluid">
+            </p>
+            <p>{{ blog.text2 }}</p>
+            <div class="tag-widget post-tag-container mb-5 mt-5">
+                {% for i in tag %}
+              <div class="tagcloud">
+                <a href="" class="tag-cloud-link">{{ i.name }}</a>
+              </div>
+                {% endfor %}
+            </div>
+
+            <div class="pt-5 mt-5">
+              <h3 class="mb-5">{% blocktrans %} Comments{% endblocktrans %}</h3>
+              <ul class="comment-list">
+                {% for i in comment %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'images/person_1.jpg' %}" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ i.user }}</h3>
+                    <div class="meta">{{ i.creates_as }}</div>
+                    <p>{{ i.text }}</p>
+
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+              <!-- END comment-list -->
+              
+              <div class="comment-form-wrap pt-5">
+                <h3 class="mb-5">{% blocktrans %}Leave a comment{% endblocktrans %}</h3>
+                <form action="{% url 'create_comment_url' blog.id %}" method="post" class="p-5 bg-light">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="message">{% blocktrans %}Message{% endblocktrans %}</label>
+                    <textarea name="text" id="message" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div> <!-- .col-md-8 -->
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+                <h3 class="heading">{% blocktrans %}Categories{% endblocktrans %}</h3>
+              <ul class="categories">
+                  {% for i in category %}
+                <li><a href="/shop/?category={{i.name}}">{{ i.name }} </a></li>
+                  {% endfor %}
+
+              </ul>
+            </div>
+
+
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading">{% blocktrans %}Recent Blog{% endblocktrans %}</h3>
+              {% for i in recent_blog %}
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style=" border-radius:15px; background-image: url('{{ i.image.url }}')"></a>
+                <div class="text">
+                  <h3 class="heading-1"><a href="{% url 'blog_single_url' i.id %}">{{ i.title }}</a></h3>
+                  <div class="meta">
+                    <div><a href="{% url 'blog_single_url' i.id %}"><span class="icon-calendar"></span> {{ i.created_at }}</a></div>
+                    <div><a href="{% url 'blog_single_url' i.id %}"><span class="icon-person"></span> {{ i.user }}</a></div>
+
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading">{% blocktrans %}Tag Cloud{% endblocktrans %}</h3>
+                {% for i in tag %}
+              <div class="tagcloud">
+                <a href="" class="tag-cloud-link">{{ i.name }}</a>
+              </div>
+                {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+{% endblock %}

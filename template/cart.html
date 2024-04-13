@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>{% blocktrans %}Cart{% endblocktrans %}</span></p>
+            <h1 class="mb-0 bread">{% blocktrans %}My Cart{% endblocktrans %}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-cart">
+			<div class="container">
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>&nbsp;</th>
+						        <th>&nbsp;</th>
+						        <th>{% blocktrans %}Product name{% endblocktrans %}</th>
+						        <th>{% blocktrans %}Price{% endblocktrans %}</th>
+						        <th>{% blocktrans %}Quantity{% endblocktrans %}</th>
+						        <th>{% blocktrans %}Total{% endblocktrans %}</th>
+								  <th>{% blocktrans %}Update{% endblocktrans %}</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+							{% for i in products %}
+								<tr class="text-center">
+						        <td class="product-remove"><a href="{% url 'remove_cart_product_url' user.id i.name.id %}"><span class="ion-ios-close"></span></a></td>
+						        <td class="image-prod"><img src="{{i.name.image.url}}" style="height:100px; width:120px"></td>
+
+						        <td class="product-name">
+						        	<h3>{{i.name.title}}</h3>
+						        	<p>{{i.name.info}}</p>
+						        </td>
+						        
+						        <td class="price">{{i.name.price}}</td>
+						        <form action="{% url 'update_cart_url' i.name.id %}" method="post">
+									{% csrf_token %}
+						        <td class="quantity">
+						        	<div class="input-group mb-3">
+					             	<input type="number" name="number" class="quantity form-control input-number" value="{{i.number}}" min="0" max="100">
+					          	</div>
+					          </td>
+						        
+						        <td class="total">{{i.common}}</td>
+						        <td class="total"><button type="submit" class="btn btn-primary py-3 px-4" >{% blocktrans %}Update {% endblocktrans %}</button></td>
+						      </form>
+								</tr>
+
+								{% endfor %}
+						    </tbody>
+						  </table>
+					  </div>
+    			</div>
+    		</div>
+    		<div class="row justify-content-end">
+    			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
+
+
+	            </form>
+
+
+    				<div class="cart-total mb-3">
+    					<h3>{% blocktrans %}Cart Totals{% endblocktrans %}</h3>
+    					<p class="d-flex">
+    						<span>{% blocktrans %}Subtotal{% endblocktrans %}</span>
+    						<span>{{total}}</span>
+    					</p>
+    					<p class="d-flex">
+    						<span>{% blocktrans %}Delivery{% endblocktrans %}</span>
+    						<span>0.00</span>
+    					</p>
+    					<p class="d-flex">
+    						<span>{% blocktrans %}Discount{% endblocktrans %}</span>
+    						<span>0.00</span>
+    					</p>
+    					<hr>
+    					<p class="d-flex total-price">
+    						<span>{% blocktrans %}Total{% endblocktrans %}</span>
+    						<span>{{total}}</span>
+    					</p>
+    				</div>
+    				<p><a href="{% url 'checkout_url' %}" class="btn btn-primary py-3 px-4">{% blocktrans %}Proceed to Checkout{% endblocktrans %}</a></p>
+    			</div>
+    		</div>
+			</div>
+		</section>
+
+ {% endblock %}

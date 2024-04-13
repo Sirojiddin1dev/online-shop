@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+{% load static %}
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>{% blocktrans %}Products{% endblocktrans %}</span></p>
+            <h1 class="mb-0 bread">{% blocktrans %}Products{% endblocktrans %}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 mb-5 text-center">
+                <ul class="product-category">
+                    <li><a href="?category=" {% if not selected_category %} class="active" {% endif %}>{% blocktrans %}All{% endblocktrans %}</a></li>
+                    {% for cat in categories %}
+                        <li><a href="?category={{ cat.name }}" {% if cat.name == selected_category %} class="active" {% endif %}>{{ cat.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            {% for i in products %}
+            <div class="col-md-6 col-lg-3 ftco-animate">
+                <div class="product">
+                    <a href="{% url 'product_single_url' i.id %}" class="img-prod"><img class="img-fluid" src="{{i.image.url}}" alt="Colorlib Template">
+                        {% if i.discount %}
+                        <span class="status">-{{i.discount}}%</span>
+                        {% else %}
+                        <div class="overlay"></div>
+                        {% endif %}
+                    </a>
+                    <div class="text py-3 pb-4 px-3 text-center">
+                        <h3><a href="{% url 'product_single_url' i.id %}">{{i.title}}</a></h3>
+                        <div class="d-flex">
+                            <div class="pricing">
+                                {% if i.discount %}
+                                <p class="price"><span class="mr-2 price-dc">{{i.price}} so'm</span><span class="price-sale">{{i.discount_price}}</span></p>
+                                {% else %}
+                                <p class="price"><span>{{i.price}}</span></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="bottom-area d-flex px-3">
+                            <div class="m-auto d-flex">
+                                <a href="{% url 'product_single_url' i.id %}" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                    <span><i class="ion-ios-menu"></i></span>
+                                </a>
+
+                                <a href="{% url 'add_basket_url' i.id %}" class="buy-now d-flex justify-content-center align-items-center mx-1" onclick="addToBasket({{ i.id }})" >
+										<span><i class="ion-ios-cart"></i></span>
+									</a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Pagination -->
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        <!-- Oldingi sahifa -->
+                        {% if products.has_previous %}
+                        <li><a href="?page={{ products.previous_page_number }}">&lt;</a></li>
+                        {% else %}
+                        <li class="disabled"><span>&lt;</span></li>
+                        {% endif %}
+
+                        <!-- Sahifa raqamlari -->
+                        {% for num in products.paginator.page_range %}
+                        {% if products.number == num %}
+                        <li class="active"><span>{{ num }}</span></li>
+                        {% else %}
+                        <li><a href="?page={{ num }}">{{ num }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+
+                        <!-- Keyingi sahifa -->
+                        {% if products.has_next %}
+                        <li><a href="?page={{ products.next_page_number }}">&gt;</a></li>
+                        {% else %}
+                        <li class="disabled"><span>&gt;</span></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Andijon PFC | Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{% static 'css/bootstrap-3.1.1.min.css' %}" rel="stylesheet" type="text/css">
+<!-- Custom Theme files -->
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+<script src="{% static 'js/jquery.min.js"> </script>
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+<script src="{% static 'js/modernizr.custom.97074.js' %}"></script>
+<script src="{% static 'js/jquery.chocolat.js' %}"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('.gallery-bottom a').Chocolat();
+		});
+		</script>
+    <style>.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+h5 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 67%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}</style>
+</head>
+<body>
+   <!--/start-banner-->
+  <div class="banner two" >
+  </div>
+    <!--//end-banner-->
+     <!--/start-main-->
+          <div class="main-content" style="margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 200px;">
+		     <!--/gallery-->
+
+        <div class="login-container">
+        <form method="post" action="{% url 'login_url' %}" class="login-form">
+            {% csrf_token %}
+            <h2>Login</h2><br>
+            {% if error %}
+            <h4>Login or password is incorrect</h4>
+            {% endif %}
+            <div class="input-group">
+                <label for="id_username">Username:</label>
+                <input type="text" name="username" id="id_username" required>
+            </div>
+            <div class="input-group">
+                <label for="id_password">Password:</label>
+                <input type="password" name="password" id="id_password" required>
+            <h5><a href="{% url 'sing_up_url' %}">Sing Up</a> </h5>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    </div>
+
+	         <!--//gallery-->
+
+</div>
+	<!--/start-footer-section-->
+
+	<!--//end-footer-section-->
+			<!--/start-copyright-section-->
+				<div class="copyright">
+						  <p>&copy; 2015 Basketball. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+					</div>
+
+
+				<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear'
+								 		};
+										*/
+
+										$().UItoTop({ easingType: 'easeOutQuart' });
+
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+<!--JS-->
+<script type="text/javascript" src="{% static 'js/bootstrap-3.1.1.min.js' %}"></script>
+
+<!--//JS-->
+
+</body>
+</html>
