@@ -25,7 +25,32 @@ class Category(models.Model):
         return self.name
 
 
+
+
 class Product(models.Model):
+    COLOR = (
+        ("red","red"),
+        ("black","black"),
+        ("white","white"),
+        ("green","green"),
+        ("violet","violet"),
+        ("turquoise","turquoise"),
+        ("khaki","khaki"),
+        ("grey","grey"),
+        ("petrol","petrol"),
+        ("blue","blue"),
+        ("lightblue","lightblue"),
+        ("olive","olive"),
+
+    )
+    SIZE = (
+        ("S","s"),
+        ("L","L"),
+        ("M","M"),
+        ("XL","XL"),
+    )
+    color = models.CharField(max_length=100, choices=COLOR)
+    size = models.CharField(max_length=50, choices=SIZE)
     image = models.ImageField(upload_to='product_image')
     title = models.CharField(max_length=100)
     price = models.IntegerField(default=0)

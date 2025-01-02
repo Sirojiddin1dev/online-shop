@@ -205,10 +205,29 @@ def shop_view(request):
     paginator = Paginator(products, 8)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
+    product = Product.objects.all()
 
+    # Filters
+    category = request.GET.get('category')
+    color = request.GET.get('color')
+    size = request.GET.get('size')
+    min_price = request.GET.get('min_price')
+    max_price = request.GET.get('max_price')
+
+    if category:
+        product = product.filter(category=category)
+    if color:
+        product = product.filter(color=color)
+    if size:
+        product = product.filter(size=size)
+    if min_price:
+        product = product.filter(price__gte=min_price)
+    if max_price:
+        product = product.filter(price__lte=max_price)
     context = {
         'categories': categories,
         'products': page_obj,
+        'product': product,
         'selected_category': category,
         'basket': basket,
         'contact': Info.objects.last()

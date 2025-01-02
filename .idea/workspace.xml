@@ -1,36 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6777982-6fb1-4d76-a71b-1692e0ef32fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main/translation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="341e9b18-6cf4-417f-ad25-708d301ab518" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/online_store.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/online_shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/online_shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/account_settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/account_settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/blog-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/blog-single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/product-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/product-single.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/sing-up.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,71 +24,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Sirojiddin1dev"
+  }
 }]]></component>
-  <component name="ProjectId" id="2f2py8wXlhEDvThyXt4BRBoLiXV" />
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Sirojiddin1dev/online-shop.git",
+    "accountId": "8ef55fd0-469c-40af-b658-0c732a3e702d"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2hrpT1WT4Iruhssxi59wxlM1kqL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="online_shop" type="Python.DjangoServer" factoryName="Django server">
-      <module name="online_shop" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="localhost" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a6777982-6fb1-4d76-a71b-1692e0ef32fb" name="Changes" comment="" />
-      <created>1713009281584</created>
+      <changelist id="341e9b18-6cf4-417f-ad25-708d301ab518" name="Changes" comment="" />
+      <created>1718362056869</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713009281584</updated>
-      <workItem from="1713009284662" duration="35000" />
+      <updated>1718362056869</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>

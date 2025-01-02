@@ -1,105 +1,93 @@
-{% extends 'base.html' %}
-{% block content %}
-{% load i18n %}
 {% load static %}
-
-
-    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index_url' %}">{% blocktrans %}Home{% endblocktrans %}</a></span> <span>{% blocktrans %}Products{% endblocktrans %}</span></p>
-            <h1 class="mb-0 bread">{% blocktrans %}Products{% endblocktrans %}</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<section class="ftco-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Product List</title>
+</head>
+<body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 mb-5 text-center">
-                <ul class="product-category">
-                    <li><a href="?category=" {% if not selected_category %} class="active" {% endif %}>{% blocktrans %}All{% endblocktrans %}</a></li>
-                    {% for cat in categories %}
-                        <li><a href="?category={{ cat.name }}" {% if cat.name == selected_category %} class="active" {% endif %}>{{ cat.name }}</a></li>
+        <header>
+            <h1>Product List</h1>
+        </header>
+        <main>
+            <div class="filter-form">
+                <form method="get" class="form-inline">
+                    <div class="form-group mb-2">
+                        <label for="category" class="mr-2">Category</label>
+                        <select name="category" id="category" class="form-control">
+                            <option value="">All</option>
+                            <option value="T-Shirts">T-Shirts</option>
+                            <option value="Trousers">Trousers</option>
+                            <option value="Shirts">Shirts</option>
+                            <option value="Shoes">Shoes</option>
+                            <!-- Add more categories as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group mb-2 mx-sm-3">
+                        <label for="color" class="mr-2">Color</label>
+                        <select name="color" id="color" class="form-control">
+                            <option value="">All</option>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <!-- Add more colors as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group mb-2 mx-sm-3">
+                        <label for="size" class="mr-2">Size</label>
+                        <select name="size" id="size" class="form-control">
+                            <option value="">All</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <!-- Add more sizes as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group mb-2 mx-sm-3">
+                        <label for="min_price" class="mr-2">Min Price</label>
+                        <input type="number" name="min_price" id="min_price" class="form-control" placeholder="0">
+                    </div>
+                    <div class="form-group mb-2 mx-sm-3">
+                        <label for="max_price" class="mr-2">Max Price</label>
+                        <input type="number" name="max_price" id="max_price" class="form-control" placeholder="1000000">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2 mx-sm-3">Filter</button>
+                </form>
+            </div>
+
+            <div class="product-list">
+                <ul class="main_inner row">
+                    {% for product in product %}
+                    <li class="product_item col-md-4" data-category="{{ product.category }}" data-color="{{ product.color }}" data-size="{{ product.size }}" data-price="{{ product.price }}">
+                        <div class="card mb-4">
+                            <img width="20px" class="love_basket" src="{% static 'img/heart.svg' %}" alt="love">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.title }}</h5>
+                                <p class="card-text">{{ product.info }}</p>
+                                <h3 class="card-price">{{ product.price }}</h3>
+                            </div>
+                        </div>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
-        </div>
-        <div class="row">
-            {% for i in products %}
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="product">
-                    <a href="{% url 'product_single_url' i.id %}" class="img-prod"><img class="img-fluid" src="{{i.image.url}}" alt="Colorlib Template">
-                        {% if i.discount %}
-                        <span class="status">-{{i.discount}}%</span>
-                        {% else %}
-                        <div class="overlay"></div>
-                        {% endif %}
-                    </a>
-                    <div class="text py-3 pb-4 px-3 text-center">
-                        <h3><a href="{% url 'product_single_url' i.id %}">{{i.title}}</a></h3>
-                        <div class="d-flex">
-                            <div class="pricing">
-                                {% if i.discount %}
-                                <p class="price"><span class="mr-2 price-dc">{{i.price}} so'm</span><span class="price-sale">{{i.discount_price}}</span></p>
-                                {% else %}
-                                <p class="price"><span>{{i.price}}</span></p>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="bottom-area d-flex px-3">
-                            <div class="m-auto d-flex">
-                                <a href="{% url 'product_single_url' i.id %}" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                    <span><i class="ion-ios-menu"></i></span>
-                                </a>
-
-                                <a href="{% url 'add_basket_url' i.id %}" class="buy-now d-flex justify-content-center align-items-center mx-1" onclick="addToBasket({{ i.id }})" >
-										<span><i class="ion-ios-cart"></i></span>
-									</a>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <!-- Pagination -->
-        <div class="row mt-5">
-            <div class="col text-center">
-                <div class="block-27">
-                    <ul>
-                        <!-- Oldingi sahifa -->
-                        {% if products.has_previous %}
-                        <li><a href="?page={{ products.previous_page_number }}">&lt;</a></li>
-                        {% else %}
-                        <li class="disabled"><span>&lt;</span></li>
-                        {% endif %}
-
-                        <!-- Sahifa raqamlari -->
-                        {% for num in products.paginator.page_range %}
-                        {% if products.number == num %}
-                        <li class="active"><span>{{ num }}</span></li>
-                        {% else %}
-                        <li><a href="?page={{ num }}">{{ num }}</a></li>
-                        {% endif %}
-                        {% endfor %}
-
-                        <!-- Keyingi sahifa -->
-                        {% if products.has_next %}
-                        <li><a href="?page={{ products.next_page_number }}">&gt;</a></li>
-                        {% else %}
-                        <li class="disabled"><span>&gt;</span></li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Your Company</p>
+        </footer>
     </div>
-</section>
 
-{% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

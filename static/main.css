@@ -1,0 +1,572 @@
+/* Umumiy CSS */
+body {
+    background: #fff;
+}
+
+.contener {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    background: #fff;
+}
+
+.contener_footer {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    background: #000;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.headers_fix {
+    width: 90%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    height: 80px;
+    top: 0;
+}
+
+.header_inner {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header_inner_div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.headers_icons {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.headers_select {
+    border-radius: 5px;
+    outline: none;
+}
+
+.modal.left .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.left .modal-body {
+    padding: 15px 15px 80px;
+}
+
+.modal.left.fade .modal-dialog {
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.show .modal-dialog {
+    left: 0;
+}
+
+
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+.modal.right.fade .modal-dialog {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+    right: 0;
+}
+
+
+
+
+.modal_header_right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: flex-start;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+
+
+.headers_inner_ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    padding-left: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.headers_inner_ul li {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.headers_inner_ul li:hover {
+    color: #0a18dd;
+}
+
+
+
+/* Main */
+main {
+    margin-top: 100px;
+}
+
+.main_inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.nain_filtrni {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.main_filter_div {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+/* Reset some default styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.color-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.checkbox__color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox__color input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox__color-inner {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.checkbox__color-inner::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
+}
+
+.checkbox__color input[type="checkbox"]:checked+.checkbox__color-inner {
+    border-color: black;
+}
+
+.checkbox__color input[type="checkbox"]:checked+.checkbox__color-inner::after {
+    display: block;
+}
+
+.checkbox__label {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.filter_size {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+}
+
+.filter_size label {
+    font-size: 20px;
+}
+
+.filter_prac label {
+    font-size: 14px;
+}
+
+.filter_input {
+    display: flex;
+    gap: 5px;
+}
+
+.filter_input input {
+    width: 80px;
+    outline: none;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.filter_button1 {
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 4px;
+    background: #000;
+    color: #fff;
+}
+
+.filter_button1:hover{
+    background: #fff;
+    color: #000;
+}
+
+.filter_button {
+    margin: 40px 0;
+}
+
+.filter_button button,
+.filter_button button {
+    margin-top: 10px;
+}
+
+.filter_button2 {
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+}
+
+.filter_button2:hover{
+    background: #000;
+    color: #fff;
+}
+
+.filter_button2 span {
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    padding: 2px 4px;
+    
+}
+
+.card {
+    margin-bottom: 20px;
+    max-width: 385px;
+    border: none;
+}
+
+.love_basket {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.main_inner_filter {
+    width: 400px;
+    display: none;
+}
+
+
+
+.main_inner_filters {
+    width: 200px;
+    display: none;
+}
+
+.main_filter_div_mobil {
+    display: none;
+}
+
+.main_inner_filter_div {
+    display: flex;
+}
+
+.main_inner_filter h6 {
+    margin-top: 10px;
+}
+
+/* Footer */
+
+
+.filter-options {
+    display: none;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    background: #000;
+    color: #fff;
+}
+
+footer .footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+
+footer .footer-section h4 {
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+footer .footer-section p,
+footer .footer-section a {
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Mobil qurilmalar (max-width: 576px) uchun */
+@media (max-width: 576px) {
+    .headers_fix {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .headers_text {
+        display: none;
+    }
+
+    .header_inner {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header_inner_div {
+        justify-content: space-between;
+    }
+
+    .headers_icons {
+        width: 20px;
+        height: 20px;
+    }
+
+    .headers_select {
+        width: 100%;
+    }
+
+    .modal.left .modal-dialog {
+        width: 100%;
+    }
+
+    .main_inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Planshet qurilmalar (max-width: 768px) uchun */
+@media (max-width: 768px) {
+    .headers_fix {
+        max-width: 90%;
+        padding: 0 15px;
+    }
+
+    .main_filter_div_mobil {
+        display: flex;
+        gap: 5px;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .main_filter_div {
+        display: none;
+    }
+
+    .headers_text {
+        font-size: 12px;
+    }
+
+    .header_inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header_inner_div {
+        justify-content: space-between;
+    }
+
+    .headers_icons {
+        width: 20px;
+        height: 20px;
+    }
+
+    .headers_select {
+        width: 100%;
+    }
+
+    .modal.left .modal-dialog {
+        width: 80%;
+    }
+
+    .main_inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        max-width: 100%;
+    }
+
+}
+
+/* Kichik monitorlar (max-width: 992px) uchun */
+@media (max-width: 992px) {
+    .headers_fix {
+        width: 90%;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .header_inner {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .header_inner_div {
+        justify-content: space-between;
+    }
+
+    .headers_icons {
+        width: 25px;
+        height: 25px;
+    }
+
+    .headers_select {
+        width: auto;
+    }
+
+    .modal.left .modal-dialog {
+        width: 60%;
+    }
+
+    .main_inner {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 60%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .card-title {
+        font-size: 14px;
+
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+
+    .card-body h3 {
+        font-size: 14px;
+    }
+}
